@@ -1,0 +1,23 @@
+body {
+    display: flex;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    float: left;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    margin-top: -1px;
+    margin-left: -1px;
+}
