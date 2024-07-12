@@ -8,10 +8,17 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <button>fix</button>
-        <div class="slide-container">
-            <input autocomplete="off" type="range" min="2" max="100" value="16" class="slider" id="slider" oninput="showVal(this.value)" onchange="showVal(this.value)">
+        <div class="content">
+            <div class="slide-container" id="slideClass">
+                <p id="slider-display" oninput="showVal"></p>
+                <label for="size">Input Size: </label>
+                <input autocomplete="off" type="text" id="text-input" name="size">
+                <div>
+                    <input autocomplete="off" type="range" min="2" max="100" value="16" class="slider" id="slider" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                    <button id="confirm">Create Grid</button>
+                </div>
+            </div>
+            <div id="grid-container"></div>
         </div>
-        <div id="grid-container"></div>
     </body>
 </html>

@@ -49,12 +49,18 @@ const slider = document.querySelector("#slider");
     sliderDisplay.textContent = slider.getAttribute("value");
 });*/
 
-const sliderDisplay = document.createElement("p");
+const sliderDisplay = document.querySelector("#slider-display");
 sliderDisplay.textContent = slider.getAttribute("value");
-document.body.appendChild(sliderDisplay);
-
-console.log(slider.getAttribute("value"));
 
 function showVal(newVal) {
     sliderDisplay.textContent = newVal;
 }
+
+const textBox = document.querySelector("#text-input");
+textBox.addEventListener("keyup", function(e) {
+    if (e.key === "Enter" && textBox.value != "" && Number.isInteger(parseInt(textBox.value)) && !textBox.value.includes(".")) {
+        sliderDisplay.textContent = textBox.value;
+
+        buildCanvas(textBox.value);
+    }
+});
