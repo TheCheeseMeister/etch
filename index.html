@@ -10,7 +10,7 @@
     <body>
         <button>fix</button>
         <div class="slide-container">
-            <input type="range" min="2" max="100" value="16" class="slider" id="slider">
+            <input autocomplete="off" type="range" min="2" max="100" value="16" class="slider" id="slider" oninput="showVal(this.value)" onchange="showVal(this.value)">
         </div>
         <div id="grid-container"></div>
     </body>

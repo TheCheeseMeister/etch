@@ -45,12 +45,16 @@ buildCanvas(16);
 
 const slider = document.querySelector("#slider");
 
-slider.addEventListener("input", () => {
+/*slider.addEventListener("oninput", () => {
     sliderDisplay.textContent = slider.getAttribute("value");
-});
+});*/
 
 const sliderDisplay = document.createElement("p");
 sliderDisplay.textContent = slider.getAttribute("value");
 document.body.appendChild(sliderDisplay);
 
 console.log(slider.getAttribute("value"));
+
+function showVal(newVal) {
+    sliderDisplay.textContent = newVal;
+}
